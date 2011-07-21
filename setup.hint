@@ -1,0 +1,6 @@
+category: Net
+requires: libglib2.0_0 libintl8 libpurple0
+sdesc: "Pidgin Twitter/Identi.ca protocol plugins"
+ldesc: "This is a libpurple (Pidgin, Finch, or Empathy via 
+telepathy-haze) plugin which treats microblogging (Twitter, identi.ca, 
+status.net, etc) as IM protocols."

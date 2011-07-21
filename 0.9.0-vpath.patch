@@ -1,0 +1,10 @@
+--- origsrc/prpltwtr-0.9.0/src/gtkprpltwtr/Makefile.am	2011-06-26 12:34:38.000000000 -0500
++++ src/prpltwtr-0.9.0/src/gtkprpltwtr/Makefile.am	2011-07-21 01:52:18.726119200 -0500
+@@ -34,6 +34,6 @@ AM_CPPFLAGS = \
+ 	$(PIDGIN_CFLAGS) \
+ 	$(GLIB_CFLAGS) \
+ 	$(PIDGIN_PLUGINS) \
+-	-I$(PRPLTWTR_PATH) \
++	-I$(top_srcdir)/src/prpltwtr \
+ 	-DLOCALEDIR=\"$(LIBPURPLE_DATADIR)/locale\"
+ 

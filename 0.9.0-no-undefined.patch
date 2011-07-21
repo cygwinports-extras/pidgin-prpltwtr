@@ -1,0 +1,37 @@
+--- origsrc/prpltwtr-0.9.0/src/gtkprpltwtr/Makefile.am	2011-06-26 12:34:38.000000000 -0500
++++ src/prpltwtr-0.9.0/src/gtkprpltwtr/Makefile.am	2011-07-21 01:52:18.726119200 -0500
+@@ -21,8 +21,11 @@ AM_CFLAGS = \
+ libgtkprpltwtr_la_LDFLAGS = \
+ 	-module \
+ 	-avoid-version \
+-	-L$(PRPLTWTR_PATH) \
+-	-lprpltwtr
++	-no-undefined
++
++libgtkprpltwtr_la_LIBADD = \
++	$(PIDGIN_LIBS) \
++	../prpltwtr/libprpltwtr.la
+ 
+ pkg_LTLIBRARIES = \
+ 	libgtkprpltwtr.la
+--- origsrc/prpltwtr-0.9.0/src/prpltwtr/Makefile.am	2011-06-27 22:08:13.000000000 -0500
++++ src/prpltwtr-0.9.0/src/prpltwtr/Makefile.am	2011-07-21 00:35:18.530847000 -0500
+@@ -45,14 +45,15 @@ PRPLTWTR_SOURCES = \
+ AM_CFLAGS = \
+ 	$(st)
+ 
+-libprpltwtr_twitter_la_LDFLAGS = -module -avoid-version $(PURPLE_LIBS)
++libprpltwtr_twitter_la_LDFLAGS = -module -avoid-version -no-undefined $(PURPLE_LIBS)
+ 
+-libprpltwtr_statusnet_la_LDFLAGS = -module -avoid-version $(PURPLE_LIBS)
++libprpltwtr_statusnet_la_LDFLAGS = -module -avoid-version -no-undefined $(PURPLE_LIBS)
+ 
+ st = 
+ 
++noinst_LTLIBRARIES = libprpltwtr.la
++
+ pkg_LTLIBRARIES = \
+-	libprpltwtr.la \
+ 	libprpltwtr_twitter.la \
+ 	libprpltwtr_statusnet.la
+ 

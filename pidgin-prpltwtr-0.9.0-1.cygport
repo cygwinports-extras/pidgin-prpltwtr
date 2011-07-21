@@ -1,0 +1,11 @@
+inherit gnome2
+
+
+HOMEPAGE="http://code.google.com/p/prpltwtr/"
+SRC_URI="http://prpltwtr.googlecode.com/files/${P#pidgin-}.tar.gz"
+SRC_DIR=${P#pidgin-}
+
+PATCH_URI="0.9.0-no-undefined.patch
+           0.9.0-vpath.patch"
+
+DIFF_EXCLUDES="Makefile"
